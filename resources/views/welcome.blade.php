@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-<h1>Hello World</h1>
+    <h1>Hello World</h1>
+    <form action="/" method="POST">
+        @csrf
+        <input type="text" name="username" id="">
+        <button type="submit">送信</button>
+    </form>
 </body>
 </html>
