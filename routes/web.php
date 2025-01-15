@@ -12,6 +12,7 @@ Route::post('/', function (Request $request) {
 });
 
 Route::get('/test', function () {
+    
     $test = "Test again";
     return "<h1>$test</h1>";
 });
