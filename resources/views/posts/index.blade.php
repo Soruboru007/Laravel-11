@@ -8,6 +8,5 @@
 </head>
 <body>
     <h1>Posts Index Page</h1>
-    {{date('Y-m-d')}}
-</body>
+    <div>My name is {{$username}} and my age is {{$age}} I am gay.</div>
 </html>

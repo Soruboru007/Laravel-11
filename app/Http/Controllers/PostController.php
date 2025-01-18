@@ -13,8 +13,8 @@ class PostController extends Controller
     public function index()
     {
         //データベースからすべてのpostsを取得する
-        $name = 'Laravel';
-        $age = 34;
+        $name = 'Bishwas';
+        $age = 21;
         return view('posts.index', ['username' => $name, 'age' => $age]);
     }
 
