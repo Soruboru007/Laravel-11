@@ -1,33 +1,13 @@
 <?php
 
+use App\Http\Controllers\PostController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-	return view('welcome');
-});
-
-Route::post('/', function (Request $request) {
-	//新しいポストを作成
-	//入ってくるリクエストを検証する
-	dd($request->all());
-});
-
-Route::put('/{id}', function (Request $request, $id) {
-	return $id;
-});
-
-Route::delete('/{id}', function (Request $request, $id) {
-	return $id;
-});
-
-Route::get('/test', function () {
-
-	$test = "Test again";
-	return "<h1>$test</h1>";
-
-});
-
-
-
-
+Route::get('/posts', [PostController::class, 'index']);
+Route::get('/posts/create',[PostController::class, 'create']);
+Route::post('/posts', [PostController::class, 'store']);
+Route::get('/posts/{id}', [PostController::class, 'show']);
+Route::get('/posts/{id}/edit', [PostController::class, 'edit']);
+Route::put('/posts/{id}', [PostController::class, 'update']);
+Route::delete('/posts/{id}', [PostController::class, 'destroy']);
