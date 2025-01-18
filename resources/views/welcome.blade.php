@@ -13,11 +13,17 @@
         <input type="text" name="username" id="">
         <button type="submit">送信</button>
     </form>
-    <form action="/" method="POST">
+    <form action="/100" method="POST">
         @csrf
-        <input type="hidden" name="_method" value="PUT">
+        @method('PUT')
          <input type="text" name="username" id="">
         <button type="submit">送信</button>
     </form>
+    <form action="/100" method="POST">
+        @csrf
+        @method('DELETE')
+        <button type="submit">送信削除</button>
+    </form>
+
 </body>
 </html>

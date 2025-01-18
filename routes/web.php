@@ -11,8 +11,12 @@ Route::post('/', function (Request $request) {
     dd($request->all());
 });
 
-Route::put('/', function (Request $request) {
-    dd($request->all());
+Route::put('/{id}', function (Request $request, $id) {
+    return $id;
+});
+
+Route::delete('/{id}', function (Request $request, $id) {
+    return $id;
 });
 
 Route::get('/test', function () {
