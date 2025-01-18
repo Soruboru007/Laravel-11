@@ -13,5 +13,11 @@
         <input type="text" name="username" id="">
         <button type="submit">送信</button>
     </form>
+    <form action="/" method="POST">
+        @csrf
+        <input type="hidden" name="_method" value="PUT">
+         <input type="text" name="username" id="">
+        <button type="submit">送信</button>
+    </form>
 </body>
 </html>
