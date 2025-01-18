@@ -19,6 +19,7 @@ class PostController extends Controller
             'post1',
             'post2',
             'post3',
+            'post4',
         ];
         return view('posts.index', ['username' => $name, 'age' => $age, 'posts'=> $posts]);
     }
