@@ -12,7 +12,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //データベースからすべてのpostsを取得する
+        // データベースからすべてのpostsを取得する
         $name = 'Bishwas';
         $age = 21;
         $posts = [
@@ -21,9 +21,9 @@ class PostController extends Controller
             'post3',
             'post4',
         ];
-        return view('posts.index', ['username' => $name, 'age' => $age, 'posts'=> $posts]);
-    }
 
+        return view('posts.index', ['username' => $name, 'age' => $age, 'posts' => $posts]);
+    }
 
     /**
      * 新しいリソースを作成するフォームを表示する。
@@ -46,7 +46,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        return view('posts.show', ['post'=> $post]);
+        return view('posts.show', ['post' => $post]);
     }
 
     /**
@@ -54,7 +54,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        return view('posts.edit', ['post'=> $post]);
+        return view('posts.edit', ['post' => $post]);
     }
 
     /**
