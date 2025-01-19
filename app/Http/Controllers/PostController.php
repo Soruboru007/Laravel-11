@@ -23,14 +23,14 @@ class PostController extends Controller
         ];
         return view('posts.index', ['username' => $name, 'age' => $age, 'posts'=> $posts]);
     }
-    
+
 
     /**
      * 新しいリソースを作成するフォームを表示する。
      */
     public function create()
     {
-        //
+        return view('posts.create');
     }
 
     /**
