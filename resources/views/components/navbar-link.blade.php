@@ -1,3 +1,7 @@
+@php
+    $isActive = false;
+@endphp
+
 <li>
     <a href="/" @class([
         'block py-2 px-3 rounded md:p-0 dark:text-white md:dark:text-blue-500',
