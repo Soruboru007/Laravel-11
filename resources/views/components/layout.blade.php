@@ -7,7 +7,7 @@
     <title>Laravel 11 Tutorial</title>
     @vite('resources/css/app.css')
 </head>
-<body class="bg-slate-100 dark:bg-gray-800 text-gray-900 dark:text-white">
+<body class="bg-slate-100 dark:bg-slate-800  text-gray-900 dark:text-white">
     <x-navbar/>
 
     <div class="max-w-6xl mx-auto">
