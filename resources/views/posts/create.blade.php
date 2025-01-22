@@ -1,4 +1,5 @@
 <x-layout>
+    <x-header>Posts Create Page</x-header>
     <div class="mt-4">
         <h1 class="p-2 text-slate-700 dark:text-slate-200">Post</h1>
     </div>
