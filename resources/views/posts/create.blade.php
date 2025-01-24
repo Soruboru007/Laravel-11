@@ -4,7 +4,7 @@
         <h1 class="p-2 text-slate-700 dark:text-slate-200">Post</h1>
     </div>
     <div class="max-w-4xl mx-auto p-4 bg-slate-200 dark:bg-gray-900 rounded-lg shadow-md">
-        <form>
+        <for method="POST" action="/posts">
             <div class="mb-6">
                 <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900
                 dark:text-white">Title</label>
@@ -14,8 +14,7 @@
                 dark:focus:border-blue-500">
             </div>
             <div>
-                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
-                    message</label>
+                <label for="message" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">content</label>
                 <textarea id="message" rows="4"
                 class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300
                 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600
