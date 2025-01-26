@@ -14,3 +14,4 @@ class Post extends Model
         'content',
     ];
 }
+
