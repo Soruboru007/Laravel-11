@@ -1,11 +1,6 @@
 <x-layout>
     <x-header>Posts Create Page</x-header>
     <div class="max-w2xl mx-auto p-4 bg-slate-200 dark:bg-slate-900 rounded-lg">
-        @if ($errors->any())
-            @foreach ($errors->all() as $error)
-                <span class="text-red-500">{{ $error }}</span>
-            @endforeach
-        @endif
         <form method="POST" action="/posts">
             @csrf
             <div class="mb-6">
@@ -16,6 +11,9 @@
                     focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700
                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                     dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                @error('title')
+                    <span class="text-red-500 text=sm"> {{$message}} </span>
+                @enderror
             </div>
             <div class="mb-6">
 
@@ -27,6 +25,9 @@
                     dark:border-gray-600 dark:placeholder-gray-400 dark:text-white
                     dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Write your thoughts here..."></textarea>
+                @error('content')
+                    <span class="text-red-500 text=sm"> {{$message}} </span>
+                @enderror
             </div>
             <div class="mb-6">
                 <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300
