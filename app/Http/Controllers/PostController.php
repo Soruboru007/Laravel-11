@@ -39,11 +39,11 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|max:255',
-            'content' => 'required',
+            'title' => 'required', 'min:5',
+            'content' => 'required', 'min:10',
         ]);
         Post::create($validated);
-        
+
         return to_route(('posts.index'));
     }
 
