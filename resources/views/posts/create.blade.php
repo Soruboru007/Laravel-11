@@ -1,7 +1,7 @@
 <x-layout>
     <x-header>Posts Create Page</x-header>
     <div class="max-w2xl mx-auto p-4 bg-slate-200 dark:bg-slate-900 rounded-lg">
-        <form>
+        <form method="POST" action="/posts">
             <div class="mb-6">
                 <label for="default-input" class="block mb-2 text-sm font-medium text-gray-900
                 dark:text-white">Tilte</label>
@@ -14,8 +14,7 @@
             <div class="mb-6">
 
                 <label for="message" class="block mb-2 text-sm font-medium text-gray-900
-                dark:text-white">Your
-                    message</label>
+                dark:text-white">Content</label>
                 <textarea id="message" rows="4"
                     class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border
                     border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700
