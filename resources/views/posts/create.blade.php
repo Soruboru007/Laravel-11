@@ -1,9 +1,11 @@
 <x-layout>
     <x-header>Posts Create Page</x-header>
     <div class="max-w2xl mx-auto p-4 bg-slate-200 dark:bg-slate-900 rounded-lg">
-        @foreach ($errors->all() as $error)
-            <span class="text-red-500">{{ $error }}</span>
-        @endforeach
+        @if ($errors->any())
+            @foreach ($errors->all() as $error)
+                <span class="text-red-500">{{ $error }}</span>
+            @endforeach
+        @endif
         <form method="POST" action="/posts">
             @csrf
             <div class="mb-6">
