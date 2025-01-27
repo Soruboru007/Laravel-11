@@ -42,6 +42,7 @@ class PostController extends Controller
             'title' => $request->title,
             'content' => $request->content,
         ]);
+        return redirect()->route(('posts.index'));
     }
 
     /**
