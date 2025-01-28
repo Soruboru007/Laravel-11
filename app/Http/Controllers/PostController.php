@@ -12,17 +12,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        // データベースからすべてのpostsを取得する
-        $name = 'Bishwas';
-        $age = 21;
-        $posts = [
-            'post1',
-            'post2',
-            'post3',
-            'post4',
-        ];
-
-        return view('posts.index', ['username' => $name, 'age' => $age, 'posts' => $posts]);
+        $posts = Post::all();
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**
