@@ -9,6 +9,7 @@ class PostController extends Controller
 {
     /**
      * リソースの一覧を表示する。
+     * ＼＼
      */
     public function index()
     {
