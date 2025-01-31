@@ -1,3 +1,3 @@
 <x-layout>
-    <h1>Posts Show Page</h1>
+    <h1> {{$post->title}} </h1>
 </x-layout>
