@@ -42,8 +42,9 @@ class PostController extends Controller
     /**
      * 指定されたリソースを表示する。
      */
-    public function show(Post $post)
+    public function show($id)
     {
+        $post = Post::findOrFail($id);
         return view('posts.show', ['post' => $post]);
     }
 
